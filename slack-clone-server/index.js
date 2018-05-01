@@ -5,8 +5,6 @@ import { makeExecutableSchema } from 'graphql-tools';
 import path from 'path';
 import { fileLoader, mergeTypes, mergeResolvers } from 'merge-graphql-schemas';
 
-import typeDefs from './schema';
-import resolvers from './resolvers';
 import models from './models';
 
 const typeDefs = mergeTypes(fileLoader(path.join(__dirname, './schema')));

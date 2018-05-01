@@ -9,14 +9,14 @@ export default (sequelize, DataTypes) => {
       unique: true
     },
     password: DataTypes.STRING
-  })
+  });
 
   User.associate = models => {
     User.belongsToMany(models.Team, {
       through: 'member',
       foreignKey: 'userId'
-    })
-  }
+    });
+  };
 
-  return User
-}
+  return User;
+};

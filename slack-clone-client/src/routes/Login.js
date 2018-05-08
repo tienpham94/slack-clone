@@ -10,14 +10,14 @@ class Login extends React.Component {
 
     extendObservable(this, {
       email: '',
-      password: '',
+      password: ''
     });
   }
 
   onSubmit = async () => {
     const { email, password } = this;
     const response = await this.props.mutate({
-      variables: { email, password },
+      variables: { email, password }
     });
     console.log(response);
     const { ok, token, refreshToken } = response.data.login;
